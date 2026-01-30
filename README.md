@@ -1,73 +1,6 @@
-# LLM献媚效应检测与缓解研究 - 实验项目
+# LLM献媚效应检测与缓解研究
 
 完整的Python实验框架，用于实现论文中描述的献媚效应识别和缓解研究。
-
-## 项目结构
-
-```
-experiment/
-├── src/                          # 源代码模块
-│   ├── __init__.py
-│   ├── config.py                # 配置管理
-│   ├── data_generator.py         # 合成数据生成
-│   ├── audit_framework.py        # 审计员智能体框架
-│   ├── model_client.py           # 模型API客户端
-│   ├── evaluator.py              # 评估模块
-│   ├── result_analyzer.py        # 结果分析
-│   └── experiment_runner.py      # 完整实验管道
-├── data/                         # 数据存储
-│   ├── synthetic_dataset.json    # 生成的合成数据集
-│   ├── generated_dialogues.json  # 生成的对话
-│   └── dialogues_with_corrections.json  # 包含改进的对话
-├── results/                      # 结果输出
-│   ├── audit_results.json        # 审计分析结果
-│   ├── evaluation_results.json   # 评估结果
-│   ├── experiment_report.json    # 完整实验报告
-│   └── plots/                    # 可视化图表
-├── run_experiment.py             # 快速开始脚本
-├── requirements.txt              # Python依赖
-├── config.yaml                   # 实验配置
-├── .env.example                  # 环境变量示例
-└── README.md                     # 本文件
-```
-
-## 快速开始
-
-### 1. 环境配置
-
-```bash
-# 安装Python依赖
-pip install -r requirements.txt
-
-# 复制环境变量模板并填入API密钥
-cp .env.example .env
-
-# 编辑 .env 文件，填入真实的API密钥
-# DEEPSEEK_API_KEY=your_api_key_here
-# OPENAI_API_KEY=your_api_key_here
-```
-
-### 2. 运行实验
-
-#### 方式1：交互式菜单（推荐）
-
-```bash
-python run_experiment.py
-```
-
-这会显示菜单让您选择要运行的操作：
-- 运行完整实验管道
-- 只生成数据集
-- 只进行审计分析
-- 只进行评估对比
-- 自定义配置
-
-#### 方式2：Python脚本
-
-```bash
-cd src
-python experiment_runner.py
-```
 
 ## 核心模块说明
 
@@ -201,3 +134,4 @@ result = evaluator.evaluate_pair(
 │ • 输出详细报告                                      │
 └─────────────────────────────────────────────────────┘
 ```
+
